@@ -132,6 +132,13 @@ export default {
         .get(`${this.$api_url}/clients`)
         .then((response) => {
           this.clients = response.data;
+          if (this.$route.params.client_id) {
+            this.client_selected = this.clients.find(
+              (client) => client.value == this.$route.params.client_id
+            );
+            this.getClientWeeks();
+            return;
+          }
         })
         .catch((error) => {
           console.log(error);
@@ -144,6 +151,13 @@ export default {
         .get(`${this.$api_url}/clients/${this.client_selected.value}/weeks`)
         .then((response) => {
           this.weeks = response.data;
+          if (this.$route.params.monday_date) {
+            this.selected_week = this.weeks.find(
+              (week) => week.value == this.$route.params.monday_date
+            );
+            this.getClientWeekSchedule();
+            return;
+          }
         })
         .catch((error) => {
           console.log(error);
