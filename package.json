@@ -2,7 +2,7 @@
   "name": "recorrido-frontend",
   "version": "0.0.1",
   "description": "A Quasar Project",
-  "productName": "Recorrido Frontend",
+  "productName": "Recorrido",
   "author": "Gabriel Monzon <gabriel.monzon39@gmail.com>",
   "private": true,
   "scripts": {
