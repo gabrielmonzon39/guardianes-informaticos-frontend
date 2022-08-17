@@ -4,7 +4,7 @@ export default {};
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar>
+      <q-toolbar class="q-pl-lg q-pr-lg">
         <q-toolbar-title> Prueba Recorrido </q-toolbar-title>
 
         <div>Aug 2022</div>
