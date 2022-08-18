@@ -147,6 +147,7 @@ export default {
     getClientWeeks() {
       this.selected_week = null;
       this.hours_by_worker = null;
+      this.schedule = null;
       this.$axios
         .get(`${this.$api_url}/clients/${this.client_selected.value}/weeks`)
         .then((response) => {
@@ -155,6 +156,7 @@ export default {
             this.selected_week = this.weeks.find(
               (week) => week.value == this.$route.params.monday_date
             );
+            this.$route.params = {};
             this.getClientWeekSchedule();
             return;
           }
